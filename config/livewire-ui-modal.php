@@ -50,5 +50,7 @@ return [
         'dispatch_close_event' => false,
         
         'destroy_on_close' => false,
+
+        'z_index' => 'z-10',
     ],
 ];

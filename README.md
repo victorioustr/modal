@@ -278,6 +278,13 @@ By default, the modal will close when you click outside the modal. If you want t
  }
  ```
 
+ You can change the z-index (default value 'z-10') of the modal by overriding the static zIndex method in your modal component class:
+```php
+public static function zIndex(): string
+{
+    return 'z-30';
+}
+```
 ## Skipping previous modals
 In some cases you might want to skip previous modals. For example:
 1. Team overview modal
@@ -420,8 +427,10 @@ return [
         'close_modal_on_escape_is_forceful' => true,
 
         'dispatch_close_event' => false,
-        
+
         'destroy_on_close' => false,
+
+        'z_index' => 'z-10'
     ],
 ];
 ```

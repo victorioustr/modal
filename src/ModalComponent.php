@@ -109,6 +109,11 @@ abstract class ModalComponent extends Component implements Contract
         return config('livewire-ui-modal.component_defaults.destroy_on_close', false);
     }
 
+    public static function zIndex(): string
+    {
+        return config('livewire-ui-modal.component_defaults.z_index', 'z-10');
+    }
+
     private function emitModalEvents(array $events): void
     {
         foreach ($events as $component => $event) {
